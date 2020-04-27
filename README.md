@@ -1,2 +1,2 @@
 # Helen
-Neural net model 
+Neural Network Model
