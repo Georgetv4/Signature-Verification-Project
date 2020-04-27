@@ -1,2 +1,2 @@
-# Elena
+# Helen
 Neural net model 
