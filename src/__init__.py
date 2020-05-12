@@ -1,1 +1,1 @@
-__author__ = 'anton'
+__author__ = 'Michael Rodygin and George Tverdohlib'
