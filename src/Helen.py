@@ -106,7 +106,7 @@ history = model.fit_generator(
     validation_steps=total_val // batch_size
 )
 
-model.save('my_model.h5')
+model.save('Helen_trained.h5')
 
 """
 Граф в конце программы:
