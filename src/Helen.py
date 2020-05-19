@@ -23,10 +23,10 @@ from src.config import batch_size, epochs, IMG_HEIGHT, IMG_WIDTH, PATH
 train_dir = os.path.join(PATH, 'train')
 validation_dir = os.path.join(PATH, 'validation')
 
-train_my_dir = os.path.join(train_dir, 'My Signatures')
-train_other_dir = os.path.join(train_dir, 'Other Signatures')
-validation_my_dir = os.path.join(validation_dir, 'My Ver Signatures')
-validation_other_dir = os.path.join(validation_dir, 'Other Ver Signatures')
+train_my_dir = os.path.join(train_dir, 'Signatures1')
+train_other_dir = os.path.join(train_dir, 'Signatures2')
+validation_my_dir = os.path.join(validation_dir, 'Ver Signatures1')
+validation_other_dir = os.path.join(validation_dir, 'Ver Signatures2')
 
 num_my_tr = len(os.listdir(train_my_dir))
 num_other_tr = len(os.listdir(train_other_dir))
@@ -94,6 +94,14 @@ model.compile(optimizer='adam',
 
 model.summary()
 
+
+'''
+Сохранение не обученой модели
+'''
+
+model.save('model.h5')
+
+
 """
 Тренироква нейронной сети:
 """
@@ -106,7 +114,7 @@ history = model.fit_generator(
     validation_steps=total_val // batch_size
 )
 
-model.save('Helen_trained.h5')
+model.save('trained_model.h5')
 
 """
 Граф в конце программы:
